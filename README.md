@@ -1,4 +1,8 @@
-This repo contains my CV, generated with **RenderCV**.
+This repo contains my CV, generated with **RenderCV**, and **CV Studio**, a
+React application for managing CV content, recipes, builds, and AI-assisted
+reviews.
+
+## CV generation
 
 - **Source of truth**: `cv/cv.yaml`
 - **Automation**:
@@ -22,6 +26,54 @@ dependency pin. Both GitHub workflows perform the same version and schema check.
 Do not invoke an unpinned `rendercv` or `uvx rendercv` command: RenderCV `2.8`
 changes the Engineering Classic education entry to use a narrow degree column,
 which breaks this CV's layout.
+
+## CV Studio
+
+CV Studio is a Vite, React, TypeScript, and shadcn/ui application at
+`app/frontend`. The current WS04-A implementation provides the responsive
+application shell, dashboard, settings, and a typed mock API backed by shared
+fixtures. Content editing, resume ordering, PDF builds, and AI proposals are not
+connected yet.
+
+### Prerequisites
+
+- Node.js `^20.19.0` or `>=22.12.0` (tested with Node.js 24)
+- npm
+
+### Start the app
+
+From the repository root:
+
+```powershell
+cd app\frontend
+npm install
+npm run dev
+```
+
+Open <http://localhost:5173/>. Press `Ctrl+C` to stop the server.
+
+`npm install` is only needed after a fresh clone or a dependency change; an
+existing local `node_modules` can be reused.
+
+### Checks and production build
+
+From the repository root:
+
+```powershell
+cd app\frontend
+npm test
+npm run typecheck
+npm run lint
+npm run build
+npm run preview
+```
+
+`npm run preview` serves the production build at <http://localhost:4173/> by
+default. Use `npm run test:watch` for continuous test runs.
+
+All application data is currently mock/fixture data. The Dashboard and Settings
+screens are functional; Content Library, Resume Builder, Builds, and AI
+Assistant are placeholders for later workstreams.
 
 ## GitHub repo settings (required for the merge workflow)
 
