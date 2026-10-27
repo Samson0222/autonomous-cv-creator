@@ -1,0 +1,179 @@
+{
+  "revision": "phase0-2026-10-27",
+  "records": [
+    {
+      "id": "profile.primary",
+      "type": "profile",
+      "version": 1,
+      "status": "active",
+      "tags": ["profile"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "name": "Example Candidate",
+      "headline": "AI Engineer | RAG & Agentic Systems",
+      "location": "Kuala Lumpur, Malaysia",
+      "email": "candidate@example.com",
+      "phone": "+60123456789",
+      "website": "https://example.com",
+      "social_networks": [
+        { "network": "GitHub", "username": "example" },
+        { "network": "LinkedIn", "username": "example" }
+      ],
+      "bullets": []
+    },
+    {
+      "id": "project.notemercy",
+      "type": "project",
+      "version": 1,
+      "status": "active",
+      "tags": ["computer-vision", "python", "university-team"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "name": "NoteMercy Extension",
+      "ownership": "university_team",
+      "date": "2025",
+      "summary": "Computer vision handwriting analysis system",
+      "links": [
+        {
+          "label": "GitHub Repository",
+          "url": "https://github.com/jameswong3388/NoteMercy_Extension"
+        }
+      ],
+      "technologies": ["Python", "OpenCV", "FastAPI", "Next.js"],
+      "bullets": [
+        {
+          "id": "project.notemercy.feature-extraction",
+          "text": "Contributed to a Python/OpenCV handwriting-analysis pipeline by implementing handcrafted feature extractors for multiple writing styles.",
+          "tags": ["computer-vision", "feature-engineering"],
+          "verification": "verified",
+          "evidence": [
+            {
+              "type": "repository",
+              "reference": "https://github.com/jameswong3388/NoteMercy_Extension"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "project.autonomous-support-engine",
+      "type": "project",
+      "version": 1,
+      "status": "active",
+      "tags": ["llm", "agents", "backend"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "name": "Autonomous Support Engine",
+      "ownership": "individual",
+      "date": "2026",
+      "summary": "Agentic customer support system",
+      "links": [
+        {
+          "label": "GitHub",
+          "url": "https://github.com/Samson0222/autonomous-support-engine"
+        }
+      ],
+      "technologies": ["Python", "LangGraph", "ChromaDB", "SQLite", "LangSmith"],
+      "bullets": [
+        {
+          "id": "project.autonomous-support-engine.agentic-workflow",
+          "text": "Built a stateful LangGraph workflow with explicit triage, resolver, and QA stages.",
+          "tags": ["llm", "agents"],
+          "verification": "verified",
+          "evidence": [
+            {
+              "type": "repository",
+              "reference": "https://github.com/Samson0222/autonomous-support-engine"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "skill.python",
+      "type": "skill",
+      "version": 1,
+      "status": "active",
+      "tags": ["python", "backend"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "name": "Python",
+      "category": "Languages",
+      "bullets": []
+    },
+    {
+      "id": "experience.foodport",
+      "type": "experience",
+      "version": 1,
+      "status": "active",
+      "tags": ["backend", "nodejs"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "company": "Foodport",
+      "position": "Backend Developer",
+      "ownership": "individual",
+      "location": "Kuala Lumpur, Malaysia",
+      "start_date": "2023-12",
+      "end_date": "2024-06",
+      "bullets": [
+        {
+          "id": "experience.foodport.rest-apis",
+          "text": "Developed RESTful CRUD APIs for a social food-recommendation platform using Node.js, Express.js, and MongoDB.",
+          "tags": ["backend", "nodejs"],
+          "verification": "verified",
+          "evidence": [
+            {
+              "type": "documentation",
+              "reference": "cv/cv.yaml",
+              "note": "Existing CV source used for Phase 0 examples."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "education.apu",
+      "type": "education",
+      "version": 1,
+      "status": "active",
+      "tags": ["education", "artificial-intelligence"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "institution": "Asia Pacific University of Technology & Innovation (APU)",
+      "degree": "Bachelor of Computer Science (Honours)",
+      "area": "Artificial Intelligence - First Class Honours",
+      "ownership": "individual",
+      "start_date": "2022",
+      "end_date": "2025",
+      "bullets": [
+        {
+          "id": "education.apu.cgpa",
+          "text": "CGPA: 3.66/4.00",
+          "tags": ["education"],
+          "verification": "verified",
+          "evidence": [
+            {
+              "type": "documentation",
+              "reference": "cv/cv.yaml",
+              "note": "Existing CV source used for Phase 0 examples."
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "award.example-innovation",
+      "type": "award",
+      "version": 1,
+      "status": "active",
+      "tags": ["award", "fixture"],
+      "created_at": "2026-10-20T09:00:00+08:00",
+      "updated_at": "2026-10-20T09:00:00+08:00",
+      "label": "Example Innovation Award - Finalist",
+      "ownership": "university_team",
+      "date": "2025",
+      "details": "Fixture-only award record used to validate the award contract.",
+      "bullets": []
+    }
+  ]
+}

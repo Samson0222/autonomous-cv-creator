@@ -1,0 +1,78 @@
+{
+  "revision": "phase0-2026-10-27",
+  "reports": [
+    {
+      "report_id": "quality.20261027T143500.footfallcam",
+      "build_id": "build.20261027T143500.footfallcam",
+      "status": "warnings",
+      "release_ready": true,
+      "blocking_count": 0,
+      "warning_count": 1,
+      "info_count": 1,
+      "findings": [
+        {
+          "id": "finding.link.redirected",
+          "severity": "warning",
+          "check": "hyperlink_status",
+          "message": "A project link redirected before returning a successful response.",
+          "target": {
+            "record_id": "project.notemercy",
+            "bullet_id": null,
+            "field": "links[0].url"
+          },
+          "blocking": false
+        },
+        {
+          "id": "finding.claims.evidence",
+          "severity": "info",
+          "check": "claim_evidence",
+          "message": "All selected bullets have evidence metadata.",
+          "target": {
+            "record_id": null,
+            "bullet_id": null,
+            "field": null
+          },
+          "blocking": false
+        }
+      ],
+      "generated_at": "2026-10-27T14:35:20+08:00"
+    },
+    {
+      "report_id": "quality.20261026T091500.general",
+      "build_id": "build.20261026T091500.general",
+      "status": "passed",
+      "release_ready": true,
+      "blocking_count": 0,
+      "warning_count": 0,
+      "info_count": 0,
+      "findings": [],
+      "generated_at": "2026-10-26T09:15:16+08:00"
+    }
+  ],
+  "finding_examples": [
+    {
+      "id": "finding.reference.archived",
+      "severity": "error",
+      "check": "reference_status",
+      "message": "The selected project is archived.",
+      "target": {
+        "record_id": "project.example-archived",
+        "bullet_id": null,
+        "field": "selections.projects[0]"
+      },
+      "blocking": true
+    },
+    {
+      "id": "finding.claims.missing-evidence",
+      "severity": "warning",
+      "check": "claim_evidence",
+      "message": "A selected bullet does not have evidence metadata.",
+      "target": {
+        "record_id": "project.example",
+        "bullet_id": "project.example.bullet",
+        "field": "bullets[0].evidence"
+      },
+      "blocking": false
+    }
+  ]
+}

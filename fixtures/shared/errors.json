@@ -1,0 +1,56 @@
+{
+  "revision": "phase0-2026-10-27",
+  "errors": [
+    {
+      "code": "CONTENT_REFERENCE_MISSING",
+      "http_status": 422,
+      "message": "The selected project no longer exists.",
+      "details": {
+        "recipe_id": "resume.example",
+        "record_id": "project.missing"
+      }
+    },
+    {
+      "code": "BULLET_REFERENCE_MISSING",
+      "http_status": 422,
+      "message": "The selected bullet does not exist.",
+      "details": {
+        "recipe_id": "resume.example",
+        "bullet_id": "project.example.missing-bullet"
+      }
+    },
+    {
+      "code": "PROMOTION_REQUIRES_EXPLICIT_OPERATION",
+      "http_status": 400,
+      "message": "Normal build requests cannot promote to the default CV.",
+      "details": {
+        "recipe_id": "resume.general",
+        "promote_to_default": true
+      }
+    },
+    {
+      "code": "PROPOSAL_NEEDS_VERIFICATION",
+      "http_status": 409,
+      "message": "The proposal needs supporting evidence before it can be accepted.",
+      "details": {
+        "analysis_id": "analysis.20261027.footfallcam",
+        "proposal_id": "proposal.flag.001"
+      }
+    },
+    {
+      "code": "BUILD_INCOMPLETE",
+      "http_status": 409,
+      "message": "The build is still rendering.",
+      "details": {
+        "build_id": "build.20261027T150000.general",
+        "status": "rendering"
+      }
+    },
+    {
+      "code": "SERVICE_UNAVAILABLE",
+      "http_status": 503,
+      "message": "The mock service is unavailable.",
+      "details": {}
+    }
+  ]
+}
