@@ -1,0 +1,105 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+# Tailored for the Graduate AI Engineer role at FootfallCam.
+cv:
+  name: "Samson Lai"
+  headline: "Graduate AI Engineer | Computer Vision, ML & LLM Systems"
+  location: "Kuala Lumpur, Malaysia"
+  email: "samsonlai020222@gmail.com"
+  phone: "+601110564655"
+  website: "https://my-portfolio.samsonlai020222.workers.dev/"
+  social_networks:
+    - network: LinkedIn
+      username: samson-lai-942a3b259
+    - network: GitHub
+      username: Samson0222
+  sections:
+    professional_summary:
+      - "First Class Honours Computer Science (Artificial Intelligence) graduate with hands-on experience in Python-based computer vision and image processing, AI/ML experimentation, RAG and LLM systems, and agentic applications. Builds and tests full-stack AI software with FastAPI, OpenCV, LangGraph, SQL/NoSQL data stores, and cloud deployments, combining analytical problem solving with backend engineering and reliable evaluation workflows."
+
+    technical_skills:
+      - label: "Languages"
+        details: "Python, TypeScript/JavaScript, Java, SQL"
+      - label: "Computer Vision / Scientific Computing"
+        details: "OpenCV, NumPy, SciPy, scikit-image, Pillow, image processing, handcrafted feature extraction"
+      - label: "AI / LLM"
+        details: "RAG, LangGraph, LangChain, MCP, Gemini, OpenAI API, PydanticAI, LiteLLM, hybrid retrieval, RRF, tool calling"
+      - label: "Backend / Data"
+        details: "FastAPI, Node.js, Express.js, PostgreSQL, pgvector, Supabase, MongoDB, SQLite, Qdrant, ChromaDB"
+      - label: "Frontend"
+        details: "React, Next.js"
+      - label: "Cloud / DevOps / Quality"
+        details: "Docker, AWS, Railway, Vercel, Cloudflare, Git/GitHub, GitHub Actions, pytest, Postman, LangSmith"
+
+    "Selected AI / ML Projects":
+      - name: "NoteMercy Extension - Computer Vision Handwriting Analysis System"
+        date: 2025
+        summary: "[GitHub Repository](https://github.com/jameswong3388/NoteMercy_Extension) | [Merged PRs](https://github.com/jameswong3388/NoteMercy_Extension/pulls?q=is%3Apr+author%3ASamson0222+is%3Amerged) | University team project"
+        highlights:
+          - "Contributed to a Python/OpenCV handwriting-analysis pipeline by implementing and refining handcrafted feature extractors for block, calligraphic, cursive, and shorthand writing, including aspect-ratio, loop, stroke-width, stroke-consistency, smooth-curve, terminal, and symbol-density analysis."
+          - "Integrated and tuned heuristic weighted scoring in the FastAPI analysis workflow for six handwriting styles, and contributed Next.js interface refinements for presenting extracted feature metrics and style scores."
+          - "Curated categorized test images covering print, cursive, italic, calligraphic, shorthand, and block writing through multiple merged PRs from the samson branch."
+
+      - name: "FilingLens - Grounded RAG Research Platform for SEC Filings"
+        date: 2026
+        highlights:
+          - "Built a RAG application over 25 SEC 10-K filings across five public companies using pgvector semantic search, PostgreSQL full-text search, and Reciprocal Rank Fusion."
+          - "Enforced cited, grounded answers with fail-closed validation; shipped an authenticated FastAPI and React/TypeScript system with Supabase PostgreSQL/Auth, pytest unit/integration tests, and Railway deployment."
+
+      - name: "Autonomous Support Engine - Agentic Customer Support System"
+        date: 2026
+        summary: "[GitHub](https://github.com/Samson0222/autonomous-support-engine)"
+        highlights:
+          - "Built a stateful LangGraph workflow with explicit triage, resolver, and QA stages using Gemini for resolution and local Qwen for review, ChromaDB RAG, category-aware tool dispatch, and a three-iteration circuit breaker for bounded execution."
+          - "Integrated MCP tools, SQLite checkpointing, and LangSmith tracing, and created a golden-dataset evaluation harness for billing, technical, and general support scenarios."
+
+    professional_experience:
+      - company: "Hilti"
+        position: "Business Analyst"
+        start_date: "2024-08"
+        end_date: "2024-11"
+        highlights:
+          - "Supported global Salesforce CRM operations by configuring region-specific functionality and Salesforce Flow automations from business requirements and local policies."
+          - "Translated ServiceNow user and business requests into Jira implementation tasks, collaborated on issue resolution, and validated completed changes before release across global Salesforce environments."
+
+      - company: "Foodport"
+        position: "Backend Developer"
+        start_date: "2023-12"
+        end_date: "2024-06"
+        highlights:
+          - "Developed RESTful CRUD APIs using Node.js, Express.js, and MongoDB; integrated OAuth 2.0 and Firebase Authentication and verified endpoints with Postman and scripted tests."
+          - "Containerized backend services with Docker, managed source control with Git, and deployed the application to AWS."
+
+    education:
+      - institution: "Asia Pacific University of Technology & Innovation (APU)"
+        area: "Artificial Intelligence - First Class Honours"
+        degree: "Bachelor of Computer Science (Honours)"
+        start_date: 2022
+        end_date: 2025
+        highlights:
+          - "CGPA: 3.66/4.00"
+
+    "Awards & Competitions":
+      - label: "Hilti ITC 2024 - Finalist"
+        details: "Developed an AI-powered HR system focused on enterprise talent acquisition."
+      - label: "Medical Grand Challenge - 3rd Prize"
+        details: "Built a healthcare technology solution addressing a real-world medical challenge."
+
+design:
+  theme: engineeringclassic
+  page:
+    show_top_note: false
+  header:
+    alignment: left
+    connections:
+      phone_number_format: international
+      show_icons: false
+      display_urls_instead_of_usernames: true
+      separator: "|"
+      space_between_connections: 0.18cm
+  entries:
+    highlights:
+      bullet: "-"
+      nested_bullet: "-"
+  colors:
+    name: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)

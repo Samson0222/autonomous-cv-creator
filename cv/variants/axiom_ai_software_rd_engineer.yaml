@@ -1,0 +1,97 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/rendercv/rendercv/refs/tags/v2.6/schema.json
+# Tailored for the AI Software R&D Engineer role at Axiom IT Solutions Pte Ltd.
+cv:
+  name: "Samson Lai"
+  headline: "AI Software Engineer | Agentic AI & Voice Applications | Full-Stack Development"
+  location: "Kuala Lumpur, Malaysia"
+  email: "samsonlai020222@gmail.com"
+  phone: "+601110564655"
+  website: "https://my-portfolio.samsonlai020222.workers.dev/"
+  social_networks:
+    - network: LinkedIn
+      username: samson-lai-942a3b259
+    - network: GitHub
+      username: Samson0222
+  sections:
+    professional_summary:
+      - "AI-focused Computer Science graduate (First Class Honours) with hands-on experience building full-stack AI applications, voice-enabled agents, RAG systems, and backend services. Experienced with Python, TypeScript/JavaScript, FastAPI, LangGraph, REST APIs, SQL/NoSQL databases, third-party integrations, and cloud deployment, with a focus on reliable and practical AI systems."
+
+    professional_experience:
+      - company: "Hilti"
+        position: "Business Analyst"
+        start_date: "2024-08"
+        end_date: "2024-11"
+        highlights:
+          - "Supported Salesforce CRM operations for global sales teams by configuring region-specific functionality and Salesforce Flow automations from business requirements and local policies."
+          - "Developed conditional Salesforce Flow workflows, including follow-up reminders triggered by customer inactivity, to support lead and customer relationship management."
+          - "Analyzed ServiceNow requests and user feedback, documented requirements in Jira, resolved assigned issues, and tested completed changes before release."
+
+      - company: "Foodport"
+        position: "Backend Developer"
+        start_date: "2023-12"
+        end_date: "2024-06"
+        highlights:
+          - "Developed RESTful CRUD APIs for a social food-recommendation platform using Node.js, Express.js, and MongoDB."
+          - "Integrated OAuth 2.0 and Firebase Authentication for protected API access, and verified endpoints with Postman and scripted tests covering success and error cases."
+          - "Containerized backend services with Docker, managed source control with Git, and deployed the application to AWS."
+
+    education:
+      - institution: "Asia Pacific University of Technology & Innovation (APU)"
+        area: "Artificial Intelligence - First Class Honours"
+        degree: "Bachelor of Computer Science (Honours)"
+        start_date: 2022
+        end_date: 2025
+        highlights:
+          - "CGPA: 3.66/4.00"
+
+    technical_skills:
+      - label: "Languages"
+        details: "Python, TypeScript, JavaScript, Java, SQL"
+      - label: "AI / Agentic Systems"
+        details: "LangGraph, LangChain, RAG, MCP, Gemini, OpenAI API, LiteLLM, PydanticAI, tool calling, prompt engineering"
+      - label: "Backend / APIs"
+        details: "FastAPI, Node.js, Express.js, REST APIs, OAuth 2.0, SSE, Pydantic"
+      - label: "Databases"
+        details: "PostgreSQL, pgvector, Supabase, MongoDB, SQLite, Qdrant, ChromaDB"
+      - label: "Frontend"
+        details: "React, Next.js, Web Speech API, React Flow, Liveblocks"
+      - label: "Cloud / DevOps / Testing"
+        details: "AWS, Cloudflare, Railway, Vercel, Docker, Trigger.dev, Git/GitHub, GitHub Actions, pytest, Postman, LangSmith"
+      - label: "Integrations"
+        details: "Google Workspace APIs, MCP, Firebase Auth, Supabase Auth, Clerk"
+
+    projects:
+      - name: "Minus AI - Voice-Enabled AI Workspace Agent"
+        date: 2026
+        summary: "[GitHub](https://github.com/Samson0222/minus-ai)"
+        highlights:
+          - "Built a voice- and text-controlled AI agent using Python, FastAPI, LangGraph, and the Web Speech API, enabling natural-language interaction with Gmail, Calendar, Drive, Docs, Sheets, and Contacts through Google Workspace integrations."
+          - "Integrated OAuth 2.0, Model Context Protocol (MCP), Gemini, and OpenRouter to orchestrate third-party tools, with scoped tool access and human-in-the-loop confirmation before sensitive actions such as sending emails, deleting files, or modifying permissions."
+          - "Implemented real-time Server-Sent Events (SSE), bounded multi-agent workflows, token-aware memory, fuzzy speech-transcription correction, and response verification against tool outputs to improve reliability and prevent false action confirmations."
+
+      - name: "FilingLens - Grounded RAG Research Platform for SEC Filings"
+        date: 2026
+        highlights:
+          - "Built a RAG application over 25 SEC 10-K filings across five public companies, combining pgvector semantic search and PostgreSQL full-text search with Reciprocal Rank Fusion."
+          - "Enforced grounded answers with source-level citations and a fail-closed validator that rejects citations not backed by retrieved passages."
+          - "Shipped an authenticated FastAPI and React/TypeScript system with Supabase PostgreSQL/Auth, SQLAlchemy/Alembic, OpenAI, pytest unit/integration tests, and separate Railway deployments."
+
+      - name: "StackCanvas - Collaborative AI System Design Platform"
+        date: 2026
+        summary: "[GitHub](https://github.com/Samson0222/stackcanvas)"
+        highlights:
+          - "Built a real-time collaborative architecture workspace with Next.js, TypeScript, React Flow, and Liveblocks, supporting synchronized editing, presence, and live cursors."
+          - "Integrated Gemini with Trigger.dev background workflows to translate natural-language requirements into structured canvas nodes, edges, and technical specifications."
+          - "Implemented authenticated project ownership and collaborator access with Clerk, Prisma/PostgreSQL, Vercel Blob, and Vercel deployment."
+
+    honors_and_awards:
+      - label: "Hilti ITC 2024 - Finalist"
+        details: "Developed an AI-powered HR system focused on enterprise talent acquisition."
+      - label: "3rd Prize - Medical Grand Challenge"
+        details: "Built a healthcare technology solution addressing a real-world medical challenge."
+
+design:
+  theme: engineeringclassic
+  colors:
+    name: rgb(0, 79, 144)
+    section_titles: rgb(0, 79, 144)

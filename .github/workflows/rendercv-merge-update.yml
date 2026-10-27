@@ -38,7 +38,8 @@ jobs:
       - name: Install RenderCV
         run: |
           python -m pip install --upgrade pip
-          python -m pip install "rendercv[full]==2.6"
+          python -m pip install --requirement requirements-rendercv.txt
+          python scripts/check_rendercv_version.py
 
       - name: Render CV PDF (and copy to tracked path)
         run: |
@@ -48,11 +49,11 @@ jobs:
 
           GENERATED_PDF="$(ls -1t cv/rendercv_output/*.pdf | head -n 1)"
           test -s "$GENERATED_PDF"
-          cp -f "$GENERATED_PDF" "cv/JamesWong_CV.pdf"
+          cp -f "$GENERATED_PDF" "cv/Samson_CV.pdf"
 
       - name: Stage rendered CV PDF
         run: |
-          git add "cv/JamesWong_CV.pdf"
+          git add "cv/Samson_CV.pdf"
           git diff --cached --name-status > rendercv_diff.txt || true
           git diff --cached --stat > rendercv_stat.txt || true
 
@@ -98,7 +99,7 @@ jobs:
         with:
           name: rendered-cv-pdf-merged-pr-${{ github.event.pull_request.number }}
           path: |
-            cv/JamesWong_CV.pdf
+            cv/Samson_CV.pdf
 
       - name: Comment on PR with merge update result
         if: always()

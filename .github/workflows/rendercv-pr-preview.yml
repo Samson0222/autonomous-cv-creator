@@ -36,7 +36,8 @@ jobs:
       - name: Install RenderCV
         run: |
           python -m pip install --upgrade pip
-          python -m pip install "rendercv[full]==2.6"
+          python -m pip install --requirement requirements-rendercv.txt
+          python scripts/check_rendercv_version.py
 
       - name: Render CV PDF for base SHA (old)
         run: |
@@ -53,7 +54,7 @@ jobs:
           mkdir -p out/base/cv
           OLD_PDF="$(ls -1t base-worktree/cv/rendercv_output/*.pdf | head -n 1)"
           test -s "$OLD_PDF"
-          cp -f "$OLD_PDF" "out/base/cv/JamesWong_CV.pdf"
+          cp -f "$OLD_PDF" "out/base/cv/Samson_CV.pdf"
 
       - name: Render CV PDF for PR head SHA (new)
         run: |
@@ -64,7 +65,7 @@ jobs:
           mkdir -p out/head/cv
           NEW_PDF="$(ls -1t cv/rendercv_output/*.pdf | head -n 1)"
           test -s "$NEW_PDF"
-          cp -f "$NEW_PDF" "out/head/cv/JamesWong_CV.pdf"
+          cp -f "$NEW_PDF" "out/head/cv/Samson_CV.pdf"
 
       - name: Compute PDF fingerprints (old vs new)
         run: |
@@ -81,7 +82,7 @@ jobs:
               return h.hexdigest()
           
           pairs = {
-              "cv/JamesWong_CV.pdf": ("out/base/cv/JamesWong_CV.pdf", "out/head/cv/JamesWong_CV.pdf"),
+              "cv/Samson_CV.pdf": ("out/base/cv/Samson_CV.pdf", "out/head/cv/Samson_CV.pdf"),
           }
           
           out = {}
@@ -103,7 +104,7 @@ jobs:
         with:
           name: old-cv-pdf-pr-${{ github.event.pull_request.number }}
           path: |
-            out/base/cv/JamesWong_CV.pdf
+            out/base/cv/Samson_CV.pdf
 
       - name: Upload new CV PDF (head)
         id: upload_new
@@ -111,7 +112,7 @@ jobs:
         with:
           name: new-cv-pdf-pr-${{ github.event.pull_request.number }}
           path: |
-            out/head/cv/JamesWong_CV.pdf
+            out/head/cv/Samson_CV.pdf
 
       - name: Comment on PR with old vs new CV PDF
         if: always()
@@ -164,7 +165,7 @@ jobs:
             lines.push("");
             lines.push("| File | Old (base) | New (PR) |");
             lines.push("| --- | --- | --- |");
-            const files = ["cv/JamesWong_CV.pdf"];
+            const files = ["cv/Samson_CV.pdf"];
             for (const f of files) {
               const row = fp[f] || {};
               lines.push(`| \`${f}\` | ${fmtFingerprint(row.old, "old")} | ${fmtFingerprint(row.new, "new")} |`);

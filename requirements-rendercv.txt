@@ -1,0 +1,4 @@
+# RenderCV 2.8 changes the Engineering Classic education layout by placing the
+# degree in a narrow fixed-width column. Keep this exact version until the CV
+# template has been deliberately migrated and visually reviewed.
+rendercv[full]==2.6
